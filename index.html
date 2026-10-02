@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TravelEase - Howme</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<!-- LOGIN POPUP -->
+
+<div
+    id="loginModal"
+    class="login-modal"
+>
+
+    <div class="login-box">
+
+        <button
+            class="close-btn"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+        <h2>TravelEase Login</h2>
+
+        <p>
+            Login as User or Admin
+        </p>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="loginUser()"
+        >
+            Login
+        </button>
+
+
+        <hr>
+
+
+        <h3>New User?</h3>
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name"
+        >
+
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="registerUser()"
+        >
+            Create Account
+        </button>
+
+
+        <div class="admin-login-info">
+
+            <strong>Admin Demo Login</strong>
+
+            <p>
+                Email: admin@travelease.com
+            </p>
+
+            <p>
+                Password: admin123
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="logo">
+            ✈️ TravelEase
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="services.html">Services</a>
+            </li>
+
+            <li>
+                <a href="itinerary.html">Itinerary</a>
+            </li>
+
+            <li>
+                <a href="alerts.html">Alerts</a>
+            </li>
+
+            <li>
+                <a href="modules.html">Modules</a>
+            </li>
+            <li>
+    <button
+        class="login-btn"
+        onclick="openLogin()"
+    >
+        Login
+    </button>
+</li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HOME PAGE -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <h1>
+                    Welcome to TravelEase
+                </h1>
+
+                <p>
+                    Your complete travel planning and
+                    booking platform.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="services.html"
+                        class="btn"
+                    >
+                        Explore Services
+                    </a>
+
+                    <a
+                        href="itinerary.html"
+                        class="btn secondary"
+                    >
+                        Plan Your Trip
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="section-title">
+
+                <h2>
+                    Travel Made Easy
+                </h2>
+
+                <p>
+                    Plan your journey, manage your
+                    itinerary and receive travel alerts.
+                </p>
+
+            </div>
+
+
+            <div class="card-grid">
+
+                <div class="card">
+
+                    <h3>✈️ Travel Services</h3>
+
+                    <p>
+                        Book flights, hotels and cabs
+                        from one platform.
+                    </p>
+
+                    <a
+                        href="services.html"
+                        class="btn"
+                    >
+                        View Services
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🗺️ Itinerary</h3>
+
+                    <p>
+                        Create and manage your
+                        complete travel itinerary.
+                    </p>
+
+                    <a
+                        href="itinerary.html"
+                        class="btn"
+                    >
+                        Open Itinerary
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🔔 Alerts</h3>
+
+                    <p>
+                        View important travel
+                        notifications and updates.
+                    </p>
+
+                    <a
+                        href="alerts.html"
+                        class="btn"
+                    >
+                        View Alerts
+                    </a>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>👤 User & Admin</h3>
+
+                    <p>
+                        Access the User and Admin
+                        modules.
+                    </p>
+
+                    <a
+                        href="modules.html"
+                        class="btn"
+                    >
+                        Open Modules
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © 2026 TravelEase
+        </p>
+    </footer>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
+

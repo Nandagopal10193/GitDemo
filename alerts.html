@@ -1,0 +1,278 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TravelEase - Alerts</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<!-- LOGIN POPUP -->
+
+<div
+    id="loginModal"
+    class="login-modal"
+>
+
+    <div class="login-box">
+
+        <button
+            class="close-btn"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+        <h2>TravelEase Login</h2>
+
+        <p>
+            Login as User or Admin
+        </p>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="loginUser()"
+        >
+            Login
+        </button>
+
+
+        <hr>
+
+
+        <h3>New User?</h3>
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name"
+        >
+
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="registerUser()"
+        >
+            Create Account
+        </button>
+
+
+        <div class="admin-login-info">
+
+            <strong>Admin Demo Login</strong>
+
+            <p>
+                Email: admin@travelease.com
+            </p>
+
+            <p>
+                Password: admin123
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ✈️ TravelEase
+        </div>
+
+        <ul class="nav-links">
+            <li>
+    <button
+        class="login-btn"
+        onclick="openLogin()"
+    >
+        Login
+    </button>
+</li>
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="itinerary.html">
+                    Itinerary
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="alerts.html"
+                    class="active"
+                >
+                    Alerts
+                </a>
+            </li>
+
+            <li>
+                <a href="modules.html">
+                    Modules
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ALERTS PAGE -->
+
+    <main>
+
+        <section class="page-header">
+
+            <h1>
+                🔔 Travel Alerts
+            </h1>
+
+            <p>
+                Important travel information and
+                notifications.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="alert-grid">
+
+
+                <div class="alert-card">
+
+                    <h2>
+                        ✈️ Flight Update
+                    </h2>
+
+                    <p>
+                        Check your flight status before
+                        starting your journey.
+                    </p>
+
+                </div>
+
+
+                <div class="alert-card">
+
+                    <h2>
+                        🌦️ Weather Alert
+                    </h2>
+
+                    <p>
+                        Check weather conditions at
+                        your destination.
+                    </p>
+
+                </div>
+
+
+                <div class="alert-card">
+
+                    <h2>
+                        🔔 Booking Reminder
+                    </h2>
+
+                    <p>
+                        Remember to verify your booking
+                        details before travelling.
+                    </p>
+
+                </div>
+
+
+                <div class="alert-card">
+
+                    <h2>
+                        📢 Travel Notice
+                    </h2>
+
+                    <p>
+                        Keep your identification and
+                        travel documents ready.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 TravelEase
+        </p>
+
+    </footer>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
+
+

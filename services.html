@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TravelEase - Services</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ✈️ TravelEase
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="services.html"
+                    class="active"
+                >
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="itinerary.html">
+                    Itinerary
+                </a>
+            </li>
+
+            <li>
+                <a href="alerts.html">
+                    Alerts
+                </a>
+            </li>
+
+            <li>
+                <a href="modules.html">
+                    Modules
+                </a>
+            </li>
+
+            <li>
+                <button
+                    class="login-btn"
+                    onclick="openLogin()"
+                >
+                    Login
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <h1>
+            ✈️ Travel Services
+        </h1>
+
+        <p>
+            Book flights, hotels and cars for your trip.
+        </p>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="section">
+
+        <div class="card-grid">
+
+
+            <!-- FLIGHT -->
+
+            <div class="card">
+
+                <h2>
+                    ✈️ Flight Booking
+                </h2>
+
+                <p>
+                    Search for flights between your
+                    starting location and destination.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="showBookingForm('Flight')"
+                >
+                    Book Flight
+                </button>
+
+            </div>
+
+
+            <!-- HOTEL -->
+
+            <div class="card">
+
+                <h2>
+                    🏨 Hotel Booking
+                </h2>
+
+                <p>
+                    Find hotels at your travel
+                    destination.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="showBookingForm('Hotel')"
+                >
+                    Book Hotel
+                </button>
+
+            </div>
+
+
+            <!-- CAR -->
+
+            <div class="card">
+
+                <h2>
+                    🚗 Car / Cab Booking
+                </h2>
+
+                <p>
+                    Book a car or cab for travelling
+                    around your destination.
+                </p>
+
+                <button
+                    class="btn"
+                    onclick="showBookingForm('Car')"
+                >
+                    Book Car
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING FORM -->
+
+        <div
+            id="bookingForm"
+            class="form-card"
+            style="display:none; margin-top:40px;"
+        >
+
+            <h2 id="bookingTitle">
+                Booking
+            </h2>
+
+
+            <label>
+                Starting Location
+            </label>
+
+            <input
+                type="text"
+                id="bookingFrom"
+                placeholder="Example: Vijayawada"
+            >
+
+
+            <label>
+                Destination
+            </label>
+
+            <input
+                type="text"
+                id="bookingTo"
+                placeholder="Example: Hyderabad"
+            >
+
+
+            <label>
+                Travel Date
+            </label>
+
+            <input
+                type="date"
+                id="bookingDate"
+            >
+
+
+            <label>
+                Number of Travellers
+            </label>
+
+            <input
+                type="number"
+                id="bookingTravellers"
+                min="1"
+                value="1"
+            >
+
+
+            <div id="hotelExtraFields">
+
+                <label>
+                    Number of Nights
+                </label>
+
+                <input
+                    type="number"
+                    id="bookingNights"
+                    min="1"
+                    value="1"
+                >
+
+            </div>
+
+
+            <button
+                class="btn"
+                onclick="submitBooking()"
+            >
+                Continue Booking
+            </button>
+
+
+            <button
+                class="btn secondary"
+                onclick="closeBookingForm()"
+            >
+                Cancel
+            </button>
+
+        </div>
+
+
+        <!-- BOOKING RESULT -->
+
+        <div
+            id="bookingResult"
+            class="itinerary-result"
+        >
+        </div>
+
+    </section>
+
+
+    <!-- LOGIN -->
+
+    <div
+        id="loginModal"
+        class="login-modal"
+    >
+
+        <div class="login-box">
+
+            <button
+                class="close-btn"
+                onclick="closeLogin()"
+            >
+                ×
+            </button>
+
+            <h2>
+                TravelEase Login
+            </h2>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="Email"
+            >
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Password"
+            >
+
+            <button
+                class="btn"
+                onclick="loginUser()"
+            >
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <footer>
+
+        <p>
+            © 2026 TravelEase
+        </p>
+
+    </footer>
+
+
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+

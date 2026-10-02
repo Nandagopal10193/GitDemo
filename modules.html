@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>TravelEase - Modules</title>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+</head>
+
+<!-- LOGIN POPUP -->
+
+<div
+    id="loginModal"
+    class="login-modal"
+>
+
+    <div class="login-box">
+
+        <button
+            class="close-btn"
+            onclick="closeLogin()"
+        >
+            ×
+        </button>
+
+        <h2>TravelEase Login</h2>
+
+        <p>
+            Login as User or Admin
+        </p>
+
+
+        <input
+            type="email"
+            id="loginEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="loginPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="loginUser()"
+        >
+            Login
+        </button>
+
+
+        <hr>
+
+
+        <h3>New User?</h3>
+
+        <input
+            type="text"
+            id="registerName"
+            placeholder="Full Name"
+        >
+
+
+        <input
+            type="email"
+            id="registerEmail"
+            placeholder="Email"
+        >
+
+
+        <input
+            type="password"
+            id="registerPassword"
+            placeholder="Password"
+        >
+
+
+        <button
+            class="btn"
+            onclick="registerUser()"
+        >
+            Create Account
+        </button>
+
+
+        <div class="admin-login-info">
+
+            <strong>Admin Demo Login</strong>
+
+            <p>
+                Email: admin@travelease.com
+            </p>
+
+            <p>
+                Password: admin123
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            ✈️ TravelEase
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="services.html">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="itinerary.html">
+                    Itinerary
+                </a>
+            </li>
+
+            <li>
+                <a href="alerts.html">
+                    Alerts
+                </a>
+            </li>
+
+            <li>
+                <a
+                    href="modules.html"
+                    class="active"
+                >
+                    Modules
+                </a>
+            </li>
+            <li>
+    <button
+        class="login-btn"
+        onclick="openLogin()"
+    >
+        Login
+    </button>
+</li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- MODULES PAGE -->
+
+    <main>
+
+        <section class="page-header">
+
+            <h1>
+                🔐 User & Admin Modules
+            </h1>
+
+            <p>
+                Manage the TravelEase platform.
+            </p>
+
+        </section>
+
+
+        <section class="section">
+
+            <div class="module-grid">
+
+
+                <!-- USER MODULE -->
+
+                <div class="module-card">
+
+                    <h2>
+                        👤 User Module
+                    </h2>
+
+                    <p>
+                        User module for travellers.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            View Profile
+                        </li>
+
+                        <li>
+                            Manage Bookings
+                        </li>
+
+                        <li>
+                            View Itinerary
+                        </li>
+
+                        <li>
+                            View Alerts
+                        </li>
+
+                    </ul>
+
+                    <button
+                        onclick="openUserModule()"
+                        class="btn"
+                    >
+                        Open User Module
+                    </button>
+
+                </div>
+
+
+                <!-- ADMIN MODULE -->
+
+                <div class="module-card admin-card">
+
+                    <h2>
+                        🛠️ Admin Module
+                    </h2>
+
+                    <p>
+                        Admin module for managing
+                        the TravelEase platform.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Manage Users
+                        </li>
+
+                        <li>
+                            Manage Bookings
+                        </li>
+
+                        <li>
+                            Manage Services
+                        </li>
+
+                        <li>
+                            View Statistics
+                        </li>
+
+                    </ul>
+
+                    <button
+                        onclick="openAdminModule()"
+                        class="btn"
+                    >
+                        Open Admin Module
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- USER DASHBOARD -->
+
+            <div
+                id="userDashboard"
+                class="dashboard"
+                style="display:none;"
+            >
+
+                <h2>
+                    👤 User Dashboard
+                </h2>
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Profile
+                        </h3>
+
+                        <p id="userProfile">
+                            User information
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Bookings
+                        </h3>
+
+                        <p id="userBookings">
+                            0 bookings
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Travel
+                        </h3>
+
+                        <p>
+                            Manage your travel
+                            information.
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Account
+                        </h3>
+
+                        <button
+                            onclick="logoutUser()"
+                            class="btn"
+                        >
+                            Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ADMIN DASHBOARD -->
+
+            <div
+                id="adminDashboard"
+                class="dashboard"
+                style="display:none;"
+            >
+
+                <h2>
+                    🛠️ Admin Dashboard
+                </h2>
+
+                <div class="dashboard-grid">
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Users
+                        </h3>
+
+                        <strong id="adminUsers">
+                            0
+                        </strong>
+
+                        <p>
+                            Registered Users
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Bookings
+                        </h3>
+
+                        <strong id="adminBookings">
+                            0
+                        </strong>
+
+                        <p>
+                            Total Bookings
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Services
+                        </h3>
+
+                        <strong>
+                            3
+                        </strong>
+
+                        <p>
+                            Active Services
+                        </p>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <h3>
+                            Account
+                        </h3>
+
+                        <button
+                            onclick="logoutUser()"
+                            class="btn"
+                        >
+                            Logout
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 TravelEase
+        </p>
+
+    </footer>
+
+
+    <script src="js/auth.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/admin.js"></script>
+
+</body>
+
+</html>
+
